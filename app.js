@@ -11,6 +11,11 @@ const storage = multer.diskStorage({
     }
 })
 
+// input upload
+const upload = multer({
+    storage: storage
+}).single('myImage');
+
 // init app 
 const app = express();
 
