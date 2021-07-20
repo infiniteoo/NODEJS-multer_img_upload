@@ -3,10 +3,18 @@ const multer = require('multer');
 const ejs = require('ejs');
 const path = require('path');
 
+// set storage engine
+const storage = multer.diskStorage({
+    destination: './public/uploads/',
+    filename: function(req, file, cb) {
+        cb(null, file.fieldname + '-' + Date.now() + path.extname(file.originalname));
+    }
+})
+
 // init app 
 const app = express();
 
-//EJS 
+// EJS 
 app.set('view engine', 'ejs');
 
 // PUBLIC FOLDER
