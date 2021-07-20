@@ -1,0 +1,20 @@
+{
+  "name": "NODEJS-multer_img_upload",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/infiniteoo/NODEJS-multer_img_upload.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/infiniteoo/NODEJS-multer_img_upload/issues"
+  },
+  "homepage": "https://github.com/infiniteoo/NODEJS-multer_img_upload#readme"
+}
