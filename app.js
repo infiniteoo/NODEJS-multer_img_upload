@@ -25,8 +25,21 @@ app.set('view engine', 'ejs');
 // PUBLIC FOLDER
 app.use(express.static('./public'));
 
+// ROUTES
 app.get('/', (req, res) => res.render('index'));
 
+app.post('/upload', (req, res) => {
+    upload(req, res, (err) => {
+      if(err){
+          res.render('index', {
+              msg: err
+          });
+      } else {
+          console.log(req.file);
+          res.send('test');
+      }
+    });
+})
 const port = 3000;
 
 app.listen(port, () => console.log(`server started on port ${port}`));
